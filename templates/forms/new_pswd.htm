@@ -1,0 +1,28 @@
+{%extends 'layout.htm'%} {%block page_content%}
+<img id='background-img' src="{{url_for('static',filename='images/Glasgow.png')}}">
+<h2 class="usertitle" ">{{user.username}}</h2>
+
+<div class='wrapper'>
+
+    <form method='POST' action='' enctype="multipart/form-data ">
+        {{form.hidden_tag()}}
+
+        <legend class='signup'>CREATE NEW PASSWORD
+        </legend>
+
+
+        <div>
+            {{form.password.label(class="input-label ")}} {{form.password(class='inputs')}}
+
+        </div>
+
+        <div>
+            {{form.confirm_password.label(class="input-label ")}} {{form.confirm_password(class='inputs')}}
+        </div> {{form.submit(class='button')}}
+
+    </form>
+    <div>
+        <p><a href="{{url_for( 'auth.login')}} ">Sign in</a></p>
+    </div>
+</div>
+{%endblock%}

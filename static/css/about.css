@@ -1,0 +1,89 @@
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    .about-us {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 2em;
+        color: #fff;
+        background: url(../images/2dstargazer.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 100%;
+        min-height: 70vh;
+        text-align: center;
+    }
+    .about-us h3{
+        position:absolute;
+        top:55%;
+        width:90%;
+        left:50%;
+        transform:translate(-50%);
+
+    }
+       .post-link{
+        color: #111;
+         font-size:5em;
+    }
+
+
+    
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .column {
+        float: left;
+        width: 30%;
+        padding: 0;
+        margin: 0 1.3em;
+    }
+    
+    .developer-card {
+        padding: 0;
+        background-color: rgb(7, 5, 5);
+        z-index: 1;
+    }
+    
+    .developer-card img {
+        height: 35em;
+    }
+    
+    .developer-card button {
+        background-color: #222;
+        color: inherit;
+        z-index: 2;
+        text-align: center;
+        display: inline-block;
+        outline: 0;
+        border: none;
+        padding: 2px;
+        width: 100%;
+    }
+    
+    .developer-card button:hover {
+        background-color: rgb(28, 13, 167);
+        cursor: pointer;
+    }
+    
+    .row::after,
+    about-dev::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    
+    .title {
+        color: grey;
+    }
+    
+    @media screen and (max-width:600px) {
+        .column {
+            display: block;
+            width: 100%;
+        }
+    }

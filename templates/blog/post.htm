@@ -1,0 +1,16 @@
+{%extends 'layout.htm'%}{%block page_content%}
+<a class='add-blog' href="{{url_for('.create')}}"><button class='create-post'>New article +</button></a>
+
+
+<div class='fullpage'>
+    <div class="article"> {{post.content|safe }}
+        <span class="date-posted">{{post.date_posted.strftime("%b %d %Y %H:%M:%S")}}<a href=#>{{post.author.username}}</a></span>
+    </div>
+</div>
+{%if current_user.id==post.author.id%}
+<div>
+    <a href="{{url_for('.update_post',post_id=post.id)}}"> <button class='button'>Update post</button></a>
+    <a href="{{url_for('.delete_post',post_id=post.id)}}"> <button class='button'>Delete post</button></a>
+</div>
+{%endif%}
+</div> {%endblock%}

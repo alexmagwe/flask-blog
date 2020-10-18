@@ -1,0 +1,11 @@
+{%extends 'layout.htm'%} { {% block notifications%}
+<p class='msgbar' id='msg'></p>
+{% endblock%} {%block page_content%}
+<form id="article" method="post">
+    {%if action=='update'%}
+    <button class='article-submit-btn' id='update' type="submit">Update</button> {%else%}
+
+    <button class='article-submit-btn' type="submit">Publish</button> {%endif%}
+    <textarea id='mytexteditor' name='content'></textarea>
+</form>
+{%endblock%}

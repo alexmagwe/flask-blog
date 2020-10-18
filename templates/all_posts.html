@@ -1,0 +1,10 @@
+<div class='posts'>
+    {%for post in posts%}
+        <a href="{{url_for('blog.post',post_id=post.id)}}">
+        <div class='post'>
+            <h2 class='preview-title'>{{post.preview[0].caption|safe}}</h2>
+         <div class='preview-img'> {{post.preview[0].img|safe}}</div> 
+    </div>
+    </a>
+    {%endfor%}
+</div>

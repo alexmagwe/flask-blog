@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .gallery {
+            background: rgba(158, 14, 14, 0.877);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .gallery:nth-of-type(odd) {
+            margin-top: 0;
+            align-items: flex-start;
+        }
+        
+        .gallery:nth-of-type(even) {
+            margin-top: 30px;
+            align-items: flex-end;
+        }
+        
+        .gallery img {
+            box-shadow: -7px -7px 20px 0 #1115, 7px 7px 20px 0 rgb(0, 0, 0, 0.7);
+            margin: 10px;
+            width: 400px;
+            transition: 0.3s ease-in;
+            background: rgba(255, 13, 5, 0.513);
+            border: none;
+        }
+        
+        .gallery img:hover {
+            width: 410px;
+            padding: 1px;
+            z-index: 1000;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>IMAGES</h2>
+
+    <div id="carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="assets/paper_img/pencils.jpg" alt="Awesome Image">
+                    </div>
+                    <div class="item">
+                        <img src="assets/paper_img/shoes.jpg" alt="Awesome Image">
+                    </div>
+                    <div class="item">
+                        <img src="assets/paper_img/types.jpg" alt="Awesome Image">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="fa fa-angle-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="fa fa-angle-right"></span>
+                </a>
+            </div>
+        </div>
+        <div class='gallery'>
+            <img src='static/images/3dcode.jpg'>
+            <img src='static/images/background.jpg'>
+            <img src='static/images/background1.jpg'>
+            <img src='static/images/background2.jpg'>
+            <img src='static/images/hacker3.jpeg'>
+            <img src='static/images/idea.jpg'>
+            <img src='static/images/studio.jpg'>
+
+
+        </div>
+</body>
+
+</html>

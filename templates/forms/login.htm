@@ -1,0 +1,39 @@
+{%extends 'layout.htm'%} {% import "bootstrap/wtf.html" as wtf %} {%block page_content%}
+<!-- <img id='background-img' src="{{url_for('static',filename='images/Path.png')}}"> -->
+<!-- {{wtf.quick_form(form)}} -->
+<div class='form-container'>
+
+<div class='login-container auth-container'>
+   
+    <form method='POST' action=''>
+        {{form.hidden_tag()}}
+
+
+        <legend class='signup'>SIGN IN
+        </legend>
+        <div>
+
+            {{form.email.label(class='input-label')}} {{form.email(class='inputs')}}
+
+        </div>
+        <div>
+            {{form.password.label(class="input-label")}} {{form.password(class="inputs")}}
+        </div>
+        <div>
+            {{form.submit(class='button')}}
+        </div>
+
+        <dv>{{form.remember()}}
+            <span>Remember me</span>
+        </dv>
+    </form>
+    <div>
+
+        <p> <a class='primary' href="{{url_for('auth.reset_request')}}"><small>Forgot password</small></a></p>
+        <p> <a class='primary' href="{{url_for('auth.register')}}">Sign up</a></p>
+
+
+    </div>
+</div>
+</div>
+{%endblock%}

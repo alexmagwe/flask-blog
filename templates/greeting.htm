@@ -1,0 +1,15 @@
+{% extends 'layout.htm' %} {% block content %}
+<div class="wrapper">
+    <form method='POST' action=''>
+
+        <div> {{form.hidden_tag()}} {{form.name(class='inputs')}}</div>
+
+        <div>
+            {{form.submit(class='button')}}
+        </div>
+    </form>
+    {%if name%}
+    <h2> HELLO {{name}} </h2>{% endif %}
+
+</div>
+{% endblock%}

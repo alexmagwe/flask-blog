@@ -1,0 +1,12 @@
+**/__pycache__/
+tinydrvepkey
+.flaskenv
+temp
+.vscode/
+faker.py
+fake.py
+.
+..
+*.sqlite
+tobeused
+memes

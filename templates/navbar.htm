@@ -1,0 +1,42 @@
+<div class='nav-bar '>
+    <a class='home-link' href="{{url_for('counter_app.home')}}">
+        <h2>HOME</h2>
+    </a>
+    <div id="nav-container">
+        <div class="toggle-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <div class='nav-bar-links'>
+        <a href="{{url_for('blog.blogs')}}">
+            <h2>BLOGS</h2>
+        </a>
+        <a href="{{url_for('counter_app.about')}}">
+            <h2>ABOUT</h2>
+        </a>
+        {%if current_user.is_anonymous%}
+        <a href="{{url_for('auth.login')}}">
+            <h2>LOGIN</h2>
+        </a>
+        <a href="{{url_for('auth.register')}}">
+            <h2>SIGN UP</h2>
+        </a>
+        {%else%}
+        <a href="{{url_for('auth.logout')}}">
+            <h2>LOGOUT</h2>
+        </a>
+        <a href="{{url_for('auth.user')}}">
+            <h2>ACCOUNT</h2>
+        </a>
+        {%endif%}
+
+    </div>
+</div>
+
+<script>
+    $(".toggle-icon").click(function() {
+        $('#nav-container ').toggleClass("pushed");
+    });
+</script>

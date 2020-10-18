@@ -1,0 +1,6 @@
+{%import '_macros.html' as macros%} {%extends 'layout.htm'%} {%block page_content%}
+<a href="{{url_for('blog.create')}}">
+    <button class='create-post'>New article +</button>
+</a> {%include 'all_posts.html'%}
+<div class='pagination-container'>{{macros.pagination_widget(pagination,'blog.blogs')}}</div>
+{%endblock%}
